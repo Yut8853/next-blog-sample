@@ -21,7 +21,7 @@ async function getAllBlogs () {
     return b.frontmatter.id - a.frontmatter.id
   })
   return {
-    blogs: blogs
+    blogs: sortedBlogs
   }
 }
 
@@ -35,6 +35,7 @@ const Blog = async() => {
         {blogs.map((blog,index) => 
           <div key={index}>
             <h2>{blog.frontmatter.title}</h2>
+            <P>{blog.frontmatter.excerpt}</P>
             <p>{blog.frontmatter.date}</p>
             <Link href={`/blog/${blog.slug}`}>Read More</Link>
           </div>
