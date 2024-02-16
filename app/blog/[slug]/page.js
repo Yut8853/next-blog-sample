@@ -2,16 +2,22 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkDown from 'react-markdown';
+import Image from 'next/image';
 
 const singleBlog = async (props) => {
     const { singleDocument } = await getSingleBlog(props)
     return (
+      <>
+        <div>
+          <Image src={singleDocument.data.image} alt='hero' height={500} width={1000} quality={90} property={true} />
+        </div>
         <div>
             <h1>Single Blog</h1>
             <h2>{singleDocument.data.title}</h2>
             <p>{singleDocument.data.date}</p>
             <ReactMarkDown>{singleDocument.content}</ReactMarkDown>
         </div>
+      </>
     )
 }
 

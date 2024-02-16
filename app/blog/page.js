@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Image from 'next/image';
 
 async function getAllBlogs () {
   const files = fs.readdirSync(path.join('data'));
@@ -33,12 +34,17 @@ const Blog = async() => {
       <h1>Blog</h1>
 
         {blogs.map((blog,index) => 
-          <div key={index}>
-            <h2>{blog.frontmatter.title}</h2>
-            <p>{blog.frontmatter.excerpt}</p>
-            <p>{blog.frontmatter.date}</p>
-            <Link href={`/blog/${blog.slug}`}>Read More</Link>
-          </div>
+          <>
+            <div key={index}>
+              <h2>{blog.frontmatter.title}</h2>
+              <p>{blog.frontmatter.excerpt}</p>
+              <p>{blog.frontmatter.date}</p>
+              <Link href={`/blog/${blog.slug}`}>Read More</Link>
+            </div>
+            <div>
+              <Image src={blog.frontmatter.image} alt="hero" height={300} width={1000} quality={90} priority={true}/>
+            </div>
+          </>
         )}
     </div>
   )
