@@ -5,12 +5,11 @@ import logoImage from '../../public/images/logo.png';
 const Header = () => {
     return (
         <header>
-            <div>
+            <div className='container'>
+                <div>
                 <Link href="/">
                     <Image src={logoImage} alt="logo" />
                 </Link>
-            </div>
-            <nav>
                 <ul>
                     <li>
                         <Link href="/">Home</Link>
@@ -22,7 +21,9 @@ const Header = () => {
                         <Link href="/contact">Contact</Link>
                     </li>
                 </ul>
-            </nav>
+
+                </div>                    
+            </div>
         </header>
     )
 }

@@ -5,16 +5,16 @@ const Footer = () => {
         <footer>
             <div>
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="../../public/images/github.svg" alt="github" />
+                    <img src="/images/github.svg" alt="github" />
                 </a>
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="../../public/images/linkedin.svg" alt="github" />
+                    <img src="/images/linkedin.svg" alt="github" />
                 </a>
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="../../public/images/twitter.svg" alt="github" />
+                    <img src="/images/twitter.svg" alt="github" />
                 </a>
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="../../public/images/facebook.svg" alt="github" />
+                    <img src="/images/facebook.svg" alt="github" />
                 </a>
                 <hr />
                 <Link href="/">Home</Link>

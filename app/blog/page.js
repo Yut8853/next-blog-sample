@@ -30,22 +30,24 @@ const Blog = async() => {
   const { blogs } = await getAllBlogs();
   console.log(blogs);
   return (
-    <div>
+    <div className='wrapper'>
+      <div className='container'>
       <h1>Blog</h1>
 
         {blogs.map((blog,index) => 
-          <>
-            <div key={index}>
+          <div key={index} className='blogCard'>
+            <div className='cardContainer'>
               <h2>{blog.frontmatter.title}</h2>
               <p>{blog.frontmatter.excerpt}</p>
               <p>{blog.frontmatter.date}</p>
               <Link href={`/blog/${blog.slug}`}>Read More</Link>
             </div>
-            <div>
+            <div className='blogImg'>
               <Image src={blog.frontmatter.image} alt="hero" height={300} width={1000} quality={90} priority={true}/>
             </div>
-          </>
+          </div>
         )}
+      </div>
     </div>
   )
 }

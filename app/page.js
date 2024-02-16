@@ -6,24 +6,26 @@ import profileImage from '../public/images/profile.jpg';
 const Index = () => {
   return (
     <>
-      <div>
-        <h1>Hi! JunkBranding</h1>
-        <h3>Web Developer</h3>
+      <div className='hero'>
+        <Image src={heroImage} alt="hero" />
+        <div className='textContainer'>
+          <h1>Hi! JunkBranding</h1>
+          <h3>Web Developer</h3>
+        </div>
       </div>
-      <div>
-          <div>
-            <Image src={heroImage} alt="hero" />
+      <div className='container'>
+          <div className='profile'>
             <div>
               <h2>JavaScriptNerd</h2>
-              <p>LoremIpsumissimplydummytextoftheprintingandtypesettingindustry.LoremIpsumhasbeentheindustry'sstandarddummytexteversincethe1500s,whenanunknownprintertookagalleyoftypeandscrambledittomakeatypespecimenbook.Ithassurvivednotonlyfivecenturies,butalsotheleapintoelectronictypesetting,remainingessentiallyunchanged.Itwaspopularisedinthe1960swiththereleaseofLetrasetsheetscontainingLoremIpsumpassages,andmorerecentlywithdesktoppublishingsoftwarelikeAldusPageMakerincludingversionsofLoremIpsum.</p>
+              <p>LoremIpsumissimplydummytextofth</p>
             </div>
             <div>
               <Image src={profileImage} alt="hero" />
             </div>
           </div>
-          <div>
+          <div className='skills'>
             <h2>Skills</h2>
-              <div>
+              <div className='skillsContainer'>
                 <div>
                   <img src="/images/javascript.svg"alt="javascript"/><span>JavaScript/10years</span>
                 </div>
@@ -39,7 +41,7 @@ const Index = () => {
               </div>
           </div>
         </div> 
-        <div>
+        <div className='ctaButton'>
           <Link href="/contact">MakeItHappen!</Link>
         </div>
     
